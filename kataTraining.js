@@ -33,9 +33,23 @@ function numberToString(num) {
 
 //A Strange Trip to the Market
 
+/*
 function isLockNessMonster(s) {
     return /tree fiddy|three fifty|3.50/.test(s);
   }
    
   console.log(isLockNessMonster('tree fiddy'));
-   
+*/
+
+//Anagram Detection
+var isAnagram = function(test, original) {
+    console.log(stringSort(test));
+    console.log(stringSort(original));
+    return stringSort(test) === stringSort(original);
+};
+
+function stringSort(str) {
+    return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('')
+};
+
+console.log(isAnagram('Twoo', 'WooT'));
