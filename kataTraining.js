@@ -22,12 +22,20 @@ function removeChar(str){
 
 //Convert a Number to a String!
 
+/*
 function numberToString(num) {
     return num.toString();
   }
 
   console.log(numberToString(9));
   console.log(typeof(numberToString(9)));
-  
+*/
+
+//A Strange Trip to the Market
+
+function isLockNessMonster(s) {
+    return /tree fiddy|three fifty|3.50/.test(s);
+  }
    
+  console.log(isLockNessMonster('tree fiddy'));
    
