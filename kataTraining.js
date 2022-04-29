@@ -42,6 +42,7 @@ function isLockNessMonster(s) {
 */
 
 //Anagram Detection
+/*
 var isAnagram = function(test, original) {
     console.log(stringSort(test));
     console.log(stringSort(original));
@@ -53,3 +54,23 @@ function stringSort(str) {
 };
 
 console.log(isAnagram('Twoo', 'WooT'));
+*/
+
+//Birthday I - Cake
+function cake(x, y) {
+    var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
+    var candlesFell = 0;
+    const arr = y.split('');
+    var valueCandles = (x / 100) * 70;
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 === 0) {
+            console.log(y.charCodeAt(i))
+            candlesFell += arr[i].charCodeAt(0);
+        } else {
+            candlesFell += alpha.indexOf(arr[i]) + 1;
+        }
+    }
+    return candlesFell > valueCandles ? 'Fire!' : 'That was close!';
+}
+
+console.log(cake(793, 'yie'));

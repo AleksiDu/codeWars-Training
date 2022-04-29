@@ -1,1 +1,2 @@
-hello
+
+        return "Fire!";
