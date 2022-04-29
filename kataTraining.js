@@ -57,6 +57,7 @@ console.log(isAnagram('Twoo', 'WooT'));
 */
 
 //Birthday I - Cake
+/*
 function cake(x, y) {
     var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     var candlesFell = 0;
@@ -74,3 +75,17 @@ function cake(x, y) {
 }
 
 console.log(cake(793, 'yie'));
+*/
+
+//Get the Middle Charecter
+const getMiddle = (s) => {
+    let middle = "";
+  
+    if (s.length % 2 === 1) middle = [s[(s.length / 2) | 0]];
+    else middle = [s[(s.length / 2 - 1) | 0], s[(s.length / 2) | 0]];
+  
+    return middle.join("");
+  };
+  
+  console.log(getMiddle("HELLO0"));
+
