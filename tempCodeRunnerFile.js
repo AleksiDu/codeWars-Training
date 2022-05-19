@@ -1,2 +1,1 @@
-
-        return "Fire!";
+result
