@@ -31,5 +31,12 @@ let makeNegative = (num) => {
 
 console.log(makeNegative(1));
 
+//Opposite number
+
+let opposite = (number) => {
+    return -number;
+};
+
+console.log(opposite(-3));
 
 
