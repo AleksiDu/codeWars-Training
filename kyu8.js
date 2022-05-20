@@ -23,7 +23,13 @@ let positiveSum = (arr) => {
 
 console.log(positiveSum([1,2,3,4,5]));
 
+// Return Negative
 
+let makeNegative = (num) => {
+    return -Math.abs(num);
+};
+
+console.log(makeNegative(1));
 
 
 
