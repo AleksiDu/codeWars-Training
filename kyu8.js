@@ -39,4 +39,11 @@ let opposite = (number) => {
 
 console.log(opposite(-3));
 
+//Convert bollean values to strings "Yes" or "No"
 
+let boolToWord = (bool) => {
+    if(bool === true) return "Yes";
+    if(bool === false) return "No";
+};
+
+console.log(boolToWord(true));
