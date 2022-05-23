@@ -60,3 +60,14 @@ let repeatStr = (n, s) => {
 
 console.log(repeatStr(5, '*'));
 
+//Grasshopper-Summation
+// My solution and Best Practice
+let summation = (num) => {
+    let sum = 0;
+    for(let i = 1; i <= num; i++){
+        sum += i;
+    }
+    return sum;
+};
+
+console.log( summation(8));
