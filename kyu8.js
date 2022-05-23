@@ -71,3 +71,11 @@ let summation = (num) => {
 };
 
 console.log( summation(8));
+
+//Remove String Spaces
+
+let noSpace = (x) => {
+    return x.replace(/\s+/gm, "");
+};
+
+console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"))
