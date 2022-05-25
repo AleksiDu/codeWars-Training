@@ -78,4 +78,16 @@ let noSpace = (x) => {
     return x.replace(/\s+/gm, "");
 };
 
-console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"))
+console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
+
+//Find the smallest integer in the array
+
+let findSmallestInt = (args) => {
+     return args.sort((a, b) => {
+        return a - b;
+     })[0];
+     
+};
+
+console.log(findSmallestInt([34, 15,88, 2]));
+

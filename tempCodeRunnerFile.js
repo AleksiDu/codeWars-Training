@@ -1,1 +1,1 @@
--number
+findSmallestInt
