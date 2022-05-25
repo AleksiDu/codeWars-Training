@@ -1,1 +1,1 @@
-findSmallestInt
+  console.log(numbers[i]);

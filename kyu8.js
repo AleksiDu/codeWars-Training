@@ -64,13 +64,13 @@ console.log(repeatStr(5, '*'));
 // My solution and Best Practice
 let summation = (num) => {
     let sum = 0;
-    for(let i = 1; i <= num; i++){
+    for (let i = 1; i <= num; i++) {
         sum += i;
     }
     return sum;
 };
 
-console.log( summation(8));
+console.log(summation(8));
 
 //Remove String Spaces
 
@@ -81,13 +81,23 @@ let noSpace = (x) => {
 console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
 
 //Find the smallest integer in the array
-
+// My solution
 let findSmallestInt = (args) => {
-     return args.sort((a, b) => {
+    return args.sort((a, b) => { //Best Practices: return Math.min(...args)
         return a - b;
-     })[0];
-     
+    })[0];
 };
 
-console.log(findSmallestInt([34, 15,88, 2]));
+console.log(findSmallestInt([34, 15, 88, 2]));
 
+//Square(n) Sum
+//My solution
+let suqareSum = (numbers) => {
+    let sum = 0;
+    for (const element of numbers) { //Best Practice return numbers.reduce((sum,num) => sum + (num * num), 0);
+        sum += element ** 2;         //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
+    };
+    return sum;
+}
+
+console.log(suqareSum([1, 2, 2]));
