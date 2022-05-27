@@ -1,1 +1,1 @@
-console.log(splitStr[i]);
+split
