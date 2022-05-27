@@ -1,1 +1,1 @@
-  console.log(numbers[i]);
+console.log(splitStr[i]);
