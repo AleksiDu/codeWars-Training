@@ -26,3 +26,11 @@ let squareDigits = (num) => {
 }
 
 console.log(squareDigits(9119));
+
+// Dismvowel Trolls
+
+let dismvowel = (str) => {
+    return str.replace(/[aeiou]/gi, "");
+}
+
+console.log(dismvowel("This website is for losers LOL!"));
