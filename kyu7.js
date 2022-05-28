@@ -34,3 +34,12 @@ let dismvowel = (str) => {
 }
 
 console.log(dismvowel("This website is for losers LOL!"));
+
+// Highest and Lowest 
+// My Solution
+highAndLow = (numbers) => {
+    let result = numbers.split(" ").sort((a, b) => a - b); // Best Practices numbers = numbers.split(' ').map(Number);
+    return (result[result.length - 1] + " " + result[0]);  // return Math.max.apply(0, numbers) + ' ' + Math.min.apply(0, numbers);
+};
+
+console.log(highAndLow("1 2 31 4 -5"));
