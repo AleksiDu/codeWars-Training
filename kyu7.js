@@ -43,3 +43,11 @@ highAndLow = (numbers) => {
 };
 
 console.log(highAndLow("1 2 31 4 -5"));
+
+// Descending Order
+
+descendingOrder = (n) => {
+    return Number(((String(n).split("")).sort((a, b) => b - a)).join(""));
+};
+
+console.log(descendingOrder(42145));

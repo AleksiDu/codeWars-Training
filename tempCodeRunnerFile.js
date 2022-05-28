@@ -1,2 +1,1 @@
- console.log(i);
-    console.log(result[i - 1]);
+return Number(String(n).sort((a, b) => a - b));
