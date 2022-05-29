@@ -51,3 +51,15 @@ descendingOrder = (n) => {
 };
 
 console.log(descendingOrder(42145));
+
+// Mumbling
+
+accum = (s) => {
+    let result = [];
+    let slpitedString = s.toLowerCase().split("");
+    for (let i = 0; i < slpitedString.length; i++) { // Best Practices return s.split('').map((c, i) => (c.toUpperCase() + c.toLowerCase().repeat(i))).join('-');
+        result.push(slpitedString[i].repeat(i + 1));
+    };
+    return result.map(str => str.replace(/^\w/g, firstLetter => firstLetter.toUpperCase())).join("-");
+}
+console.log(accum("abcd"));

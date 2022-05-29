@@ -1,1 +1,1 @@
-return Number(String(n).sort((a, b) => a - b));
+result
