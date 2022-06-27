@@ -126,3 +126,25 @@ console.log(countSheeps([true, true, true, false,
     true, true, true, true,
     false, false, true, true]));
 
+
+/**
+ *  
+ *  Century From Year
+ *  https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/train/javascript
+ * 
+ */
+
+// My Solution
+
+function century(year) {
+    if (year % 100 === 0) {
+        return year / 100;
+    } else {
+        return Math.floor(year / 100) + 1;
+    }
+}
+
+//Best Practice: const century = year => Math.ceil(year/100);
+
+console.log(century(1701));
+
