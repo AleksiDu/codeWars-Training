@@ -78,26 +78,73 @@ let noSpace = (x) => {
     return x.replace(/\s+/gm, "");
 };
 
-console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"));
+console.log(noSpace("8 j 8   mBliB8g  imjB8B8  jl  B"))
+
 
 //Find the smallest integer in the array
-// My solution
-let findSmallestInt = (args) => {
-    return args.sort((a, b) => { //Best Practices: return Math.min(...args)
-        return a - b;
-    })[0];
-};
 
-console.log(findSmallestInt([34, 15, 88, 2]));
+//Best Practice
+// class SmallestIntigerFinder {
+//    let findSmallestInt = (args) => {
+//    }
+// }
 
-//Square(n) Sum
-//My solution
-let suqareSum = (numbers) => {
-    let sum = 0;
-    for (const element of numbers) { //Best Practice return numbers.reduce((sum,num) => sum + (num * num), 0);
-        sum += element ** 2;         //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce
-    };
-    return sum;
+
+// My Solution
+
+const mainFunction = (input) => {
+    let number = input.split("").sort((a, b) => b - a);
+    number.splice(2)
+    return [number.join("")];
+
 }
 
-console.log(suqareSum([1, 2, 2]));
+console.log(mainFunction("53449287983"));
+
+// Counting sheep...
+
+// My Solution
+function countSheeps(arrayOfSheep) {
+    let count = 0;
+    for (let i = 0; i < arrayOfSheep.length; i++) {
+        if (arrayOfSheep[i] === true) {
+            count++
+        }
+    }
+    return count;
+}
+
+//Best Practice
+// function countSheeps(arrayOfSheeps) {
+//     return arrayOfSheeps.filter(Boolean).length;
+// }
+
+console.log(countSheeps([true, true, true, false,
+    true, true, true, true,
+    true, false, true, false,
+    true, false, false, true,
+    true, true, true, true,
+    false, false, true, true]));
+
+
+/**
+ *  
+ *  Century From Year
+ *  https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097/train/javascript
+ * 
+ */
+
+// My Solution
+
+function century(year) {
+    if (year % 100 === 0) {
+        return year / 100;
+    } else {
+        return Math.floor(year / 100) + 1;
+    }
+}
+
+//Best Practice: const century = year => Math.ceil(year/100);
+
+console.log(century(1701));
+

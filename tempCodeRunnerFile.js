@@ -1,1 +1,1 @@
-result
+return result.push(number[i]);
