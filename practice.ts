@@ -38,3 +38,30 @@ export class Challenge {
 }
 
 console.log(Challenge.solution(10));
+
+// Valid Braces
+console.log("Valid Braces");
+
+export function validBraces(braces: string): boolean | undefined {
+  const stack: string[] = [];
+  for (const brace of braces) {
+    if (brace === "(" || brace === "{" || brace === "[") {
+      stack.push(brace);
+    } else if (brace === ")" || brace === "}" || brace === "]") {
+      if (stack.length === 0) {
+        return false;
+      }
+      const lastBrace = stack.pop();
+      if (
+        (lastBrace === "(" && brace !== ")") ||
+        (lastBrace === "{" && brace !== "}") ||
+        (lastBrace === "[" && brace !== "]")
+      ) {
+        return false;
+      }
+    }
+  }
+  return stack.length === 0;
+}
+
+console.log(validBraces("()"));
