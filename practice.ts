@@ -65,3 +65,18 @@ export function validBraces(braces: string): boolean | undefined {
 }
 
 console.log(validBraces("()"));
+
+// Stop gninnipS My sdroW!
+console.log("Stop gninnipS My sdroW!");
+
+export function spinWords(words: string): string {
+  const reverseWordAr = words
+    .split(" ")
+    .map((word) =>
+      word.length >= 5 ? word.split("").reverse().join("") : word
+    );
+
+  return reverseWordAr.join(" ");
+}
+
+console.log(spinWords("Hey fellow warriors"));
