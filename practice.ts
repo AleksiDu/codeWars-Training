@@ -80,3 +80,16 @@ export function spinWords(words: string): string {
 }
 
 console.log(spinWords("Hey fellow warriors"));
+
+// Find the odd int
+console.log("Find the odd int");
+
+export const findOdd = (xs: number[]): number => {
+  let result = 0;
+  for (let num of xs) {
+    result ^= num;
+  }
+  return result;
+};
+
+console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
