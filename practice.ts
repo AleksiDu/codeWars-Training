@@ -2,7 +2,7 @@
 
 export function even_or_odd(n: number): string {
   // ...
-  if (n % 2) {
+  if (n % 2 != 0) {
     return "Odd";
   } else {
     return "Even";
