@@ -93,3 +93,35 @@ export const findOdd = (xs: number[]): number => {
 };
 
 console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+
+// Sum of Digits / Digital Root
+// Math length = Math.ceil(Math.log10(num + 1))
+// digit of number from right = Math.floor((number / Math.pow(10, location - 1)) % 10)
+
+/*
+Short solution
+export function digitalRoot(n: number): number {
+  return (n - 1) % 9 + 1;
+}
+*/
+
+console.log("Sum of Digits / Digital Root");
+
+export const digitalRoot = (n: number): number => {
+  let result = 0;
+  do {
+    for (let i = 0; i <= Math.ceil(Math.log10(n + 1)); i++) {
+      result += Math.floor((n / Math.pow(10, i - 1)) % 10);
+    }
+    if (result > 9) {
+      n = result;
+      result = 0;
+    } else {
+      break;
+    }
+  } while (n > 9);
+
+  return result;
+};
+
+console.log(digitalRoot(456));
