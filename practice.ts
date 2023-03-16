@@ -99,7 +99,7 @@ console.log(findOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
 // digit of number from right = Math.floor((number / Math.pow(10, location - 1)) % 10)
 
 /*
-Short solution
+Best Practice:
 export function digitalRoot(n: number): number {
   return (n - 1) % 9 + 1;
 }
@@ -125,3 +125,52 @@ export const digitalRoot = (n: number): number => {
 };
 
 console.log(digitalRoot(456));
+
+// Who likes it?
+console.log("Who likes it?");
+
+/*
+Best Practice:
+export function likes(names: string[]): string {
+  switch (names.length) {
+    case 0:
+      return 'no one likes this';
+    case 1:
+      return `${names[0]} likes this`;
+    case 2:
+      return `${names[0]} and ${names[1]} like this`;
+    case 3:
+      return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+    default:
+      return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+  }
+}
+*/
+
+export const likes = (a: string[]): string => {
+  // TODO
+  let result = "";
+
+  switch (true) {
+    case a.length < 1:
+      result = "no one likes this";
+      break;
+    case a.length === 1:
+      result = a[0] + " likes this";
+      break;
+    case a.length === 2:
+      result = a[0] + " and " + a[1] + " like this";
+      break;
+    case a.length === 3:
+      result = a[0] + ", " + a[1] + " and " + a[2] + " like this";
+      break;
+    case a.length > 3:
+      result =
+        a[0] + ", " + a[1] + " and " + (a.length - 2) + " others like this";
+      break;
+  }
+
+  return result;
+};
+
+console.log(likes(["Max", "John"]));
