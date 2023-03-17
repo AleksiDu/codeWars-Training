@@ -148,7 +148,6 @@ export function likes(names: string[]): string {
 */
 
 export const likes = (a: string[]): string => {
-  // TODO
   let result = "";
 
   switch (true) {
@@ -174,3 +173,27 @@ export const likes = (a: string[]): string => {
 };
 
 console.log(likes(["Max", "John"]));
+
+// Arr.diff
+console.log("Arr.dif");
+
+/*
+Best Practice
+export function arrayDiff(a: number[], b: number[]): number[] {
+  return a.filter(e => !b.includes(e));
+}
+*/
+
+export function arrayDiff(a: number[], b: number[]): number[] {
+  const result: number[] = [];
+
+  for (const value of a) {
+    if (!b.includes(value)) {
+      result.push(value);
+    }
+  }
+
+  return result;
+}
+
+console.log(arrayDiff([1], [4, 5]));
